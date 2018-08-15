@@ -26,7 +26,7 @@ let save = (data,callback) => {
  		res.send(500)
  	}
  		else {
- 			res.send(cat) 		}
+ 			res.send(cat) }
  })
   
   
