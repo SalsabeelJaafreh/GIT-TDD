@@ -21,6 +21,13 @@ let Cat = mongoose.model('Cat', catSchema);
 
 let save = (data,callback) => {
   // TODO: Your code here
+ Cat.save(function(error,cat){
+ 	if(error){
+ 		res.send(500)
+ 	}
+ 		else {
+ 			res.send(cat) 		}
+ })
   
   
 }
