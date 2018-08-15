@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "karma test",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "mocha": "mocha test/ServerSpec.js"
   },
   "author": "RBK",
   "license": "ISC",
@@ -27,7 +28,11 @@
     "nodemon": "^1.17.3",
     "path": "^0.12.7",
     "router": "^1.3.2",
+    "router-express": "^1.5.2",
     "sinon": "^6.1.4",
     "sinon-mongoose": "^2.2.1"
+  },
+  "devDependencies": {
+    "expect": "^23.5.0"
   }
 }

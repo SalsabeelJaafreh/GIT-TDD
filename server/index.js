@@ -3,23 +3,23 @@ const path = require('path');
 const db = require('../database/index.js');
 const bodyParser = require('body-parser');
 const app = express();
+var routerExpress = require('router-express')
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
 app.get('/cats', function (req, res) {
-  // // TODO - your code here!
-  // Cat.find({},function(error,cats){
-  // 	if(error){
-  // 		console.log("no users!")
-  // 		res.send(500)
-  // 	}
-  // 	else{
-  // 		res.send(cats)
-  // 	}
-  // })
-  
+  // TODO - your code here!
+  db.find({},function(err,data){
 
+        if(err){
+            res.status(500).send(err)
+        }
+
+        else{
+            res.status(201).send(data)
+        }
+    })
 });
 
 app.post('/cats', function (req, res) {
